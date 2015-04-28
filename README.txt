@@ -56,6 +56,16 @@ F. Precomputed tubes
 	test_tubes/UCFsports_benchmark/
 		AUC and ROC numbers for UCFSports and plots (see ipython notebook)
 
+G. Evaluate/ROC curves
+	evaluate/get_ROC_curve_JHMDB.m
+		computes ROC and AUC for JHMDB 
+			annot: ground truth annotation (annot_jhdmb.mat)
+			tubes: tubes on the test set
+			actions: list of actions 
+			iou_thresh: threshold for intersection over union
+			draw: true to draw the curves
+	(For UCF sports the same function was used with some small adjustments regarding the format of the data)
+
 ---------------------------------------------------------------------------------------------------------------
 G. Training spatial-CNN and motion-CNN
 	To train the networks you need to do the following:
