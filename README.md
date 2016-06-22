@@ -51,36 +51,36 @@ The pipeline consists of multiple steps. For simplicity, we break them down to i
 
 6. Train SVM models
 
-	train_svm/train_jhmdb.m  
-		trains SVM models, one for each action  
-			annot: ground truth information and boxes (after pruning), jhmdb_motion_sal_annot.mat  
-			feat_dir: directory with cached features  
-			save_dir: cache directory
+		train_svm/train_jhmdb.m  
+			trains SVM models, one for each action  
+				annot: ground truth information and boxes (after pruning), jhmdb_motion_sal_annot.mat  
+				feat_dir: directory with cached features  
+				save_dir: cache directory
 
 7. Action Tubes
 
-	train_svm/compute_tubes.m  
-		scores and links detections to create the final action tubes  
-			annot: source of boxes, `jhmdb_motion_sal_annot.mat`  
-			rcnn_model: the models as computed by train_jhmdb.m
+		train_svm/compute_tubes.m  
+			scores and links detections to create the final action tubes  
+				annot: source of boxes, `jhmdb_motion_sal_annot.mat`  
+				rcnn_model: the models as computed by train_jhmdb.m
 
 8. Precomputed tubes
 
-	test_tubes/  
-		tubes for all three splits of J-HMDB and UCF sports  
-	test_tubes/UCFsports_benchmark/  
-		AUC and ROC numbers for UCFSports and plots (see ipython notebook)
+		test_tubes/  
+			tubes for all three splits of J-HMDB and UCF sports  
+		test_tubes/UCFsports_benchmark/  
+			AUC and ROC numbers for UCFSports and plots (see ipython notebook)
 
 9. Evaluate/ROC curves
 
-	evaluate/get_ROC_curve_JHMDB.m  
-		computes ROC and AUC for JHMDB  
-			annot: ground truth annotation (annot_jhdmb.mat)  
-			tubes: tubes on the test set  
-			actions: list of actions  
-			iou_thresh: threshold for intersection over union  
-			draw: true to draw the curves  
-	(For UCF sports the same function was used with some small adjustments regarding the format of the data)
+		evaluate/get_ROC_curve_JHMDB.m  
+			computes ROC and AUC for JHMDB  
+				annot: ground truth annotation (annot_jhdmb.mat)  
+				tubes: tubes on the test set  
+				actions: list of actions  
+				iou_thresh: threshold for intersection over union  
+				draw: true to draw the curves  
+		(For UCF sports the same function was used with some small adjustments regarding the format of the data)
 
 
 ### Instructions
