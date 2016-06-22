@@ -21,7 +21,7 @@ The pipeline consists of multiple steps. For simplicity, we break them down to i
 1. In `startup.m`, add the paths and resolve the dependencies
 
 2. Selective search boxes need to be stored in the following format  
-	   `/ss_dir/motion/action/video/0000f.mat`  
+	    `/ss_dir/motion/action/video/0000f.mat`  
 	Video frames need to be stored in the following format  
 	   `/img_dir/action/video/0000f.png`
 
