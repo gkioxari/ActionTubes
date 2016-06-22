@@ -88,11 +88,15 @@ The pipeline consists of multiple steps. For simplicity, we break them down to i
 To train action tubes from scratch, you need to train two networks. 
 
 Training spatial-CNN and motion-CNN
-  To train the networks you need to do the following:
-    1. Compute the optical flow as in A.    
-    2. Create `window_train(val).txt` with the window data (similar to R-CNN detection)
-    3. Use Caffe to train (train prototxt is given in `models/jhmdb/train.prototxt`), and initialize with the proper model
-    4. In the case of motion-CNN, you need to make two changes in `window_data_layer.cpp`
-      a. The image mean is for all channels 128 (instead of the image mean provided)
-      b. During training, when flipping of the input image occurs the flow in x needs to also change sign
 
+  1. Compute the optical flow as in A.
+  2. Create `window_train(val).txt` with the window data (similar to R-CNN detection)
+  3. Use Caffe to train (train prototxt is given in `models/jhmdb/train.prototxt`), and initialize with the proper model
+  4. In the case of motion-CNN, you need to make two changes in `window_data_layer.cpp`
+    a. The image mean is for all channels 128 (instead of the image mean provided)
+    b. During training, when flipping of the input image occurs the flow in x needs to also change sign
+
+
+### Downloads
+
+Download pretrained models from the project's [webpage](http://people.eecs.berkeley.edu/~gkioxari/ActionTubes/)
