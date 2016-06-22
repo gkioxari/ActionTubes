@@ -21,17 +21,16 @@ The pipeline consists of multiple steps. For simplicity, we break them down to i
 1. In `startup.m`, add the paths and resolve the dependencies
 
 2. Selective search boxes need to be stored in the following format  
-	    `/ss_dir/motion/action/video/0000f.mat`  
+		`/ss_dir/motion/action/video/0000f.mat`  
 	Video frames need to be stored in the following format  
-	   `/img_dir/action/video/0000f.png`
+		`/img_dir/action/video/0000f.png`
 
 3. Optical flow computation
 
-    `compute_OF/compute_flow.m`  
-       for a pair of images computes flow as described in the paper.  
-          im1, im2: input images  
-          optical flow images need to be stored in the format  
-          `/flow_dir/action/video/0000f.png`
+  	`compute_OF/compute_flow.m`  
+    	for a pair of images computes flow as described in the paper.  
+	      im1, im2: input images  
+	      optical flow images need to be stored in the format `/flow_dir/action/video/0000f.png`
 
 4. Motion saliency
 
