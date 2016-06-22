@@ -60,9 +60,9 @@ The pipeline consists of multiple steps. For simplicity, we break them down to i
 7. Action Tubes
 
 	train_svm/compute_tubes.m  
- 		scores and links detections to create the final action tubes  
-	 		annot: source of boxes, `jhmdb_motion_sal_annot.mat`  
-	 		rcnn_model: the models as computed by train_jhmdb.m
+		scores and links detections to create the final action tubes  
+			annot: source of boxes, `jhmdb_motion_sal_annot.mat`  
+			rcnn_model: the models as computed by train_jhmdb.m
 
 8. Precomputed tubes
 
